@@ -1,0 +1,26 @@
+<wicket:extend>
+<div class="post">
+	<h1>留言板</h1>
+	
+	<div class="msg-form">
+		<form method="POST" action="/message">
+			<p>
+			用户名:<input style="width:130px;" type="text" name="name" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			E-mail:<input style="width:130px;" type="text" name="email" />
+			</p>
+			<p><textarea name="content"></textarea></p>
+			<p><input type="submit" value="发布"/></p>
+		</form>
+	</div>
+	
+	<div class="msg" wicket:id="messages">
+		<p><b wicket:id="name"></b>&nbsp;&nbsp;<a wicket:id="email"></a></p>
+		<p wicket:id="content"></p>
+		<p class="post-footer align-right">	
+			<span wicket:id="create_date" class="date"></span>	
+		</p>
+	</div>
+	
+</div>
+</wicket:extend>
+
